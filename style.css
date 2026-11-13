@@ -1,0 +1,380 @@
+/* ==========================================================================
+   ESTILIZAÇÃO COMPLETA: Flexbox, Cores, Posicionamento e Rodapé
+   ========================================================================== */
+
+/* 1. Reset de margens e espaçamentos padrão (Aula 01) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração para manter o rodapé sempre na base da página (Aula 04) */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: rgb(241, 245, 249);
+    color: rgb(51, 65, 85);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Cabeçalho Flexível (Aula 02)
+   -------------------------------------------------------------------------- */
+.cabecalho {
+    background-color: rgb(15, 23, 42);
+    color: rgb(255, 255, 255);
+    padding: 18px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icone {
+    font-size: 1.6rem;
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    color: rgb(203, 213, 225);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: rgb(56, 189, 248);
+}
+
+/* --------------------------------------------------------------------------
+   Banner Principal com Imagem Real
+   -------------------------------------------------------------------------- */
+.banner {
+    background-image: url('https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+}
+
+.banner-overlay {
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.55) 100%);
+    padding: 80px 0;
+}
+
+.banner-texto {
+    max-width: 650px;
+    margin-left: 0;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: rgba(56, 189, 248, 0.2);
+    border: 1px solid rgb(56, 189, 248);
+    color: rgb(186, 230, 253);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.banner-texto h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.banner-texto p {
+    font-size: 1.1rem;
+    color: rgb(226, 232, 240);
+    margin-bottom: 28px;
+}
+
+.botao-principal {
+    display: inline-block;
+    background-color: rgb(2, 132, 199);
+    color: rgb(255, 255, 255);
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.botao-principal:hover {
+    background-color: rgb(3, 105, 161);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Conteúdo Principal e Galeria Flexbox (Aulas 02 e 03)
+   -------------------------------------------------------------------------- */
+.principal {
+    flex: 1;
+    padding: 50px 0;
+}
+
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cabecalho-secao h2 {
+    font-size: 2rem;
+    color: rgb(15, 23, 42);
+    margin-bottom: 8px;
+}
+
+.cabecalho-secao p {
+    color: rgb(100, 116, 139);
+    font-size: 1.05rem;
+}
+
+/* Container Flexbox dos Cartões */
+.container-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    overflow: hidden;
+    flex: 1 1 300px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgb(226, 232, 240);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(2, 132, 199, 0.16);
+}
+
+.card-imagem {
+    position: relative;
+    height: 230px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-imagem img {
+    transform: scale(1.06);
+}
+
+.badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: rgb(2, 132, 199);
+    color: rgb(255, 255, 255);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.card-corpo {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-corpo h3 {
+    font-size: 1.3rem;
+    color: rgb(15, 23, 42);
+    margin-bottom: 10px;
+}
+
+.card-corpo p {
+    font-size: 0.96rem;
+    color: rgb(71, 85, 105);
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.card-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid rgb(241, 245, 249);
+    font-size: 0.85rem;
+}
+
+.info-extra {
+    color: rgb(100, 116, 139);
+    font-weight: 600;
+}
+
+.status-tag {
+    background-color: rgb(224, 242, 254);
+    color: rgb(3, 105, 161);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Seção Destaque Informativo
+   -------------------------------------------------------------------------- */
+.secao-destaque {
+    margin-top: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    padding: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    border-left: 6px solid rgb(2, 132, 199);
+}
+
+.destaque-texto {
+    flex: 2 1 320px;
+}
+
+.destaque-texto h3 {
+    font-size: 1.5rem;
+    color: rgb(15, 23, 42);
+    margin-bottom: 10px;
+}
+
+.destaque-numeros {
+    flex: 1 1 240px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.numero-item {
+    text-align: center;
+    background-color: rgb(248, 250, 252);
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid rgb(226, 232, 240);
+}
+
+.numero-item strong {
+    display: block;
+    font-size: 1.8rem;
+    color: rgb(2, 132, 199);
+}
+
+.numero-item span {
+    font-size: 0.85rem;
+    color: rgb(100, 116, 139);
+}
+
+/* --------------------------------------------------------------------------
+   Rodapé Estruturado (Aula 04)
+   -------------------------------------------------------------------------- */
+.rodape {
+    background-color: rgb(15, 23, 42);
+    color: rgb(248, 250, 252);
+    padding: 32px 0;
+    margin-top: auto;
+    border-top: 4px solid rgb(2, 132, 199);
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rodape-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.rodape-info p,
+.ano {
+    font-size: 0.9rem;
+    color: rgb(148, 163, 184);
+}
+
+.rodape-creditos {
+    text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade para Celular
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .cabecalho-conteudo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .banner-texto h2 {
+        font-size: 1.9rem;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rodape-creditos {
+        text-align: center;
+    }
+}

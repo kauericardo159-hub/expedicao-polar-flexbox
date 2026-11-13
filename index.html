@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expedição Polar | Vida Silvestre na Antártida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com navegação flexível -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <div class="logo">
+                <span class="logo-icone">❄️</span>
+                <h1>Expedição Polar</h1>
+            </div>
+            <nav class="menu">
+                <a href="#galeria">Espécies</a>
+                <a href="#sobre">Conservação</a>
+                <a href="#rodape">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Principal (Hero Section) -->
+    <section class="banner">
+        <div class="banner-overlay">
+            <div class="container banner-texto">
+                <span class="etiqueta">Biodiversidade & Natureza</span>
+                <h2>Descubra a Vida no Continente Gelado</h2>
+                <p>Conheça as espécies fascinantes que habitam as regiões mais extremas do planeta e entenda a importância da preservação ambiental.</p>
+                <a href="#galeria" class="botao-principal">Explorar Galeria</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main class="container principal">
+
+        <!-- Seção de Cartões com Flexbox -->
+        <section id="galeria" class="secao-galeria">
+            <div class="cabecalho-secao">
+                <h2>Fauna da Antártida</h2>
+                <p>Confira algumas das espécies mais emblemáticas adaptadas ao clima polar.</p>
+            </div>
+
+            <div class="container-cards">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?auto=format&fit=crop&w=800&q=80" alt="Pinguim-imperador na neve">
+                        <span class="badge">Destaque</span>
+                    </div>
+                    <div class="card-corpo">
+                        <h3>Pinguim-Imperador</h3>
+                        <p>A maior e mais pesada de todas as espécies de pinguins, capaz de suportar temperaturas inferiores a -40°C durante o inverno antártico.</p>
+                        <div class="card-rodape">
+                            <span class="info-extra">Altura: até 1,20m</span>
+                            <span class="status-tag">Protegido</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1517783999520-f068d7431a60?auto=format&fit=crop&w=800&q=80" alt="Grupo de pinguins caminhando sobre o gelo">
+                    </div>
+                    <div class="card-corpo">
+                        <h3>Colônias Glaciais</h3>
+                        <p>Vivem em grandes grupos sociais que se unem para compartilhar calor corporal e proteger os filhotes contra ventos intensos.</p>
+                        <div class="card-rodape">
+                            <span class="info-extra">Habitat: Calotas Polares</span>
+                            <span class="status-tag">Monitorado</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-imagem">
+                        <img src="https://images.unsplash.com/photo-1598439210625-5067c578f3f6?auto=format&fit=crop&w=800&q=80" alt="Pinguim-gentoo em habitat natural">
+                    </div>
+                    <div class="card-corpo">
+                        <h3>Pinguim-Gentoo</h3>
+                        <p>Reconhecido pela faixa branca acima dos olhos, é o nadador mais rápido entre todas as aves aquáticas, atingindo até 36 km/h.</p>
+                        <div class="card-rodape">
+                            <span class="info-extra">Velocidade: 36 km/h</span>
+                            <span class="status-tag">Estável</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Informativa Flexível -->
+        <section id="sobre" class="secao-destaque">
+            <div class="destaque-texto">
+                <h3>Por que preservar os ecossistemas polares?</h3>
+                <p>
+                    As regiões polares funcionam como o termostato natural da Terra, refletindo a radiação solar e regulando as correntes oceânicas globais. Estudar e proteger sua fauna é essencial para o equilíbrio climático de todo o planeta.
+                </p>
+            </div>
+            <div class="destaque-numeros">
+                <div class="numero-item">
+                    <strong>90%</strong>
+                    <span>do gelo do planeta</span>
+                </div>
+                <div class="numero-item">
+                    <strong>18</strong>
+                    <span>espécies de pinguins</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé Estruturado (Aula 04) -->
+    <footer id="rodape" class="rodape">
+        <div class="container rodape-conteudo">
+            <div class="rodape-info">
+                <h4>❄️ Expedição Polar</h4>
+                <p>Projeto desenvolvido com HTML5 e CSS3 Flexbox.</p>
+            </div>
+            <div class="rodape-creditos">
+                <p>Desenvolvido por <strong>Kauê Ricardo da Silva Barbosa</strong></p>
+                <p class="ano">© 2026 — Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
